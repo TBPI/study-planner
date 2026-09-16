@@ -1,6 +1,6 @@
 import os
 from typing import List, Dict
-import google.generativeai as genai
+import google.genai as gai
 # needed for the api key
 from dotenv import load_dotenv
 from duckduckgo_search import DDGS
@@ -43,15 +43,14 @@ def perform_web_search(query: str, max_results: int = 5) -> List[Dict[str, str]]
 class GeminiClient:
     def __init__(self):
         try:
-            genai.configure(api_key = os.getenv('GEMINI_API_KEY'))
-            # use the model gemini-1.5-flash
-            self.model = genai.GenerativeModel('gemini-1.5-flash')
-            self.chat = self.model.start_chat(history=[])
+            self.client = gai.Client(api_key = os.getenv('GEMINI_API_KEY'))
+            # Use gemini-3.6-flash
+            self.chat = self.client.chats.create(model = "gemini-3.6-flash")
         except Exception as e:
             print(f'Error configuring Gemini API: {e}')
             self.chat = None
 
-    def generate_response(self, user_input: str) -> str:
+    def generate_response(self, user_input: str) -> str | None:
         '''
         Generate an AI response with optional web search when prefixed.
 

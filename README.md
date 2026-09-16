@@ -1,1 +1,1 @@
-# study-planner
+# Study Planner

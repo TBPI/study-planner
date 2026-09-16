@@ -3,7 +3,7 @@ from typing import List, Dict
 import google.genai as gai
 # needed for the api key
 from dotenv import load_dotenv
-from duckduckgo_search import DDGS
+from ddgs import DDGS
 
 # Read variables from .env file and make them available as environment variables
 load_dotenv()

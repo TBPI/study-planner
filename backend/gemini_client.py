@@ -37,3 +37,16 @@ def perform_web_search(query: str, max_results: int = 5) -> List[Dict[Str, Str]]
     except Exception as e:
         print(f'DuckDuckGo search resulted in an error: {e}.')
         return results
+
+# Construction of a class that manages the interaction with the Gemini API
+
+class GeminiClient:
+    def __init__(self):
+        try:
+            pass
+        except Exception as e:
+            print(f'Error configuring Gemini API: {e}')
+            self.chat = None
+
+    def generate_response(self, user_input: str) -> str:
+        pass

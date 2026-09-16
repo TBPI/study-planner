@@ -6,4 +6,8 @@ Building the study planner is inspired by [this post from freeCodeCamp](https://
 
 We need the following dependencies:
 
-- 
+- `flask`: web server
+- `google-generativeai`: Gemini client
+- `python-dotenv`: in order to load GEMINI_API_KEY from .env
+- `requests`: HTTP helper
+- `duckduckgo-search`: web search

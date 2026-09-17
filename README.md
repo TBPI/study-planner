@@ -14,6 +14,9 @@ Follow these steps to run the study planner locally.
    ```
 
    Keep this file private and do not commit it to version control.
+
+   Tip: To use a different Gemini model, update the `model` value in [backend/gemini_client.py](backend/gemini_client.py).
+
 3. Install the required dependencies from the project root:
 
    ```
@@ -28,7 +31,7 @@ Follow these steps to run the study planner locally.
 
 5. Open the app in your browser at `http://127.0.0.1:5000`.
 
-> Tip: To use web search with DuckDuckGo, begin your prompt with `search:` or `/search`.
+Tip: To use web search with DuckDuckGo, begin your prompt with `search:` or `/search`.
 
 # Dependencies
 
@@ -47,7 +50,15 @@ We need the following dependencies:
 The file [`gemini_client`](backend/gemini_client.py) manages user input and chat history.
 
 - `perform_web_search()`:
-Check whether prompt starts with `search:` or `/search`
+Check whether prompt starts with `search:` or `/search` and do a web search using Gemini. 
 
-- `generate_response()`:
+- `GeminiClient`:
+Attributes are
+`self.client`, connecting to Gemini using the API key, and
+`self.chat`, connecting to the Gemini model and starting a chat (default setting is Gemini 3.5 Flash Lite).
+The `generate_response()` method checks whether the user's message contains `search:` or `/search` and launches `perform_web_search()`.
+Results are formatted with titles, links and a body. If no search is used it chats with Gemini.
 
+## Flask backend
+
+## Flask frontend

@@ -15,7 +15,7 @@ Follow these steps to run the study planner locally.
 
    Keep this file private and do not commit it to version control.
 
-   Tip: To use a different Gemini model, update the `model` value in [backend/gemini_client.py](backend/gemini_client.py).
+   *Tip:* To use a different Gemini model, update the `model` value in [backend/gemini_client.py](backend/gemini_client.py).
 
 3. Install the required dependencies from the project root:
 
@@ -31,7 +31,7 @@ Follow these steps to run the study planner locally.
 
 5. Open the app in your browser at `http://127.0.0.1:5000`.
 
-Tip: To use web search with DuckDuckGo, begin your prompt with `search:` or `/search`.
+    *Tip:* To use web search with DuckDuckGo, begin your prompt with `search:` or `/search`.
 
 # Dependencies
 

@@ -21,3 +21,5 @@ The file [`gemini_client`](backend/gemini_client.py) manages user input and chat
 - `perform_web_search()`:
 Check whether prompt starts with `search:` or `/search`
 
+- `generate_response()`:
+

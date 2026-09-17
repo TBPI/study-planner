@@ -2,24 +2,39 @@
 
 Building the study planner is inspired by [this post from freeCodeCamp](https://www.freecodecamp.org/news/how-to-build-an-ai-study-planner-agent-using-gemini-in-python/) by Tarun Singh.
 
-# Quick start
+# Quick Start
 
-1) Create an API key in [Google AI studio](https://aistudio.google.com/).
-2) Create a file `backend/.env` and copy the API key `AP.IKEY.12345` into the file
-such that it consists of one line
-```
-GEMINI_API_KEY=AP.IKEY.12345
-```
-3) Make sure the dependencies `flask`, `google-genai`, `python-dotenv`, `requests`, `ddgs` are installed.
-4) Run `python backend/app.py`
-5) You can access the study planner on `http://127.0.0.1:5000`.
-*Hint.* If you want to perform a web search using `DuckDuckGo` type `search:` or `/search` in the prompt.
+Follow these steps to run the study planner locally.
+
+1. Create a Gemini API key in [Google AI Studio](https://aistudio.google.com/).
+2. Create a file named `backend/.env` in the project root and add your API key in this format:
+
+   ```
+   GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+   ```
+
+   Keep this file private and do not commit it to version control.
+3. Install the required dependencies from the project root:
+
+   ```
+   pip install flask google-genai python-dotenv requests ddgs
+   ```
+
+4. Start the application:
+
+   ```
+   python backend/app.py
+   ```
+
+5. Open the app in your browser at `http://127.0.0.1:5000`.
+
+> Tip: To use web search with DuckDuckGo, begin your prompt with `search:` or `/search`.
 
 # Dependencies
 
 We need the following dependencies:
 
-- `flask`: cosntruct local web server
+- `flask`: construct local web server
 - `google-genai`: Gemini client
 - `python-dotenv`: in order to load GEMINI_API_KEY from .env
 - `requests`: HTTP helper

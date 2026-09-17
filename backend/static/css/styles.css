@@ -1,5 +1,5 @@
 body {
-  background-color: #f3f4f6;
+  background-color: #2961d1;
 }
 
 .chat-container {
@@ -14,7 +14,7 @@ body {
   display: flex;
   align-items: center;
   padding: 0.5rem;
-  color: #6b7280;
+  color: #060606;
 }
 
 .typing-dot {
@@ -34,14 +34,14 @@ body {
 }
 
 .user-message {
-  background-color: #3b82f6;
+  background-color: #06337c;
   color: white;
   align-self: flex-end;
 }
 
 .agent-message {
   background-color: #e5e7eb;
-  color: #374151;
+  color: #000000;
   align-self: flex-start;
 }
 

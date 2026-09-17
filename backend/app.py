@@ -19,7 +19,7 @@ def chat():
         response_text = client.generate_response(user_message)
         return jsonify({'response': response_text})
     except Exception as e:
-        return jsonify({'error': 'Error generating response.'}), 500
+        return jsonify({f'error': 'Error generating response: {e}'}), 500
 
 if __name__ == '__main__':
     app.run(debug = True)

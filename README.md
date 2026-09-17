@@ -18,3 +18,6 @@ We need the following dependencies:
 
 The file [`gemini_client`](backend/gemini_client.py) manages user input and chat history.
 
+- `perform_web_search()`:
+Check whether prompt starts with `search:` or `/search`
+

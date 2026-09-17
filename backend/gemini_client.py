@@ -44,8 +44,8 @@ class GeminiClient:
     def __init__(self):
         try:
             self.client = gai.Client(api_key = os.getenv('GEMINI_API_KEY'))
-            # Use gemini-3.6-flash
-            self.chat = self.client.chats.create(model = "gemini-3.6-flash")
+            # Use gemini-3.5-flash-lite
+            self.chat = self.client.chats.create(model = "gemini-3.5-flash-lite")
         except Exception as e:
             print(f'Error configuring Gemini API: {e}')
             self.chat = None

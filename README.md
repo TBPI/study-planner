@@ -66,3 +66,6 @@ The study planner is run using `app.py`.
 - `@app.route('/api/chat', methods=[POST])`: the API endpoint. When the user clicks 'Send' on the frontend, we send a `POST` request and the `chat()` function receives the user's message which is passed to the GeminiClient.
 
 ## Flask frontend
+
+In progress
+
